@@ -91,7 +91,7 @@ function Profile() {
           return;
         }
 
-        const response = await axios.get('http://localhost:8080/users/my-page', {
+        const response = await axios.get('http://54.198.230.191:8080/users/my-page', {
           headers: {
             Authorization: token,
           },

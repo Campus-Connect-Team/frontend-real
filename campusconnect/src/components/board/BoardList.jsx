@@ -117,7 +117,7 @@ const BoardList = () => {
         const config = {
           headers: headers,
         };
-        const response = await axios.get('http://localhost:8080/boards', config);
+        const response = await axios.get('http://54.198.230.191:8080/boards', config);
         setBoardData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);

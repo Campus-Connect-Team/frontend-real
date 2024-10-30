@@ -87,7 +87,7 @@ const ProfileEditBtn = ({ profile }) => {
 
       // 프로필 정보 수정 요청
       const response = await axios.patch(
-        `http://localhost:8080/users/my-page/basic/${studentNumber}`,
+        `http://54.198.230.191:8080/users/my-page/basic/${studentNumber}`,
         formData, // 멀티파트 폼 데이터 전송
         {
           headers: {

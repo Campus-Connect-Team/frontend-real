@@ -35,7 +35,7 @@ const ProductionWrapper = ({ status, comments }) => {
         };
 
         if (boardId) {
-          const response = await axios.get(`http://localhost:8080/boards/${boardId}`, config);
+          const response = await axios.get(`http://54.198.230.191:8080/boards/${boardId}`, config);
 
           setBoardData(response.data);
         } else {
@@ -52,7 +52,7 @@ const ProductionWrapper = ({ status, comments }) => {
 // 하트 버튼 클릭 핸들러
 const toggleHeart = async () => {
   const accessToken = localStorage.getItem('accessToken');
-  const url = `http://localhost:8080/boards/${boardId}/favorite/${isHeartActive ? 'cancel' : 'register'}`;
+  const url = `http://54.198.230.191:8080/boards/${boardId}/favorite/${isHeartActive ? 'cancel' : 'register'}`;
   try {
     await axios.patch(url, null, {
       headers: {
@@ -61,7 +61,7 @@ const toggleHeart = async () => {
     });
 
     // 서버에 반영된 데이터를 다시 가져와서 업데이트합니다.
-    const response = await axios.get(`http://localhost:8080/boards/${boardId}`, {
+    const response = await axios.get(`http://54.198.230.191:8080/boards/${boardId}`, {
       headers: {
         Authorization: accessToken
       }

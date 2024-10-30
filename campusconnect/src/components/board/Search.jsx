@@ -67,7 +67,7 @@ function Search() {
   const handleSearch = async () => {
     try {
       const token = localStorage.getItem('accessToken'); // 실제 인증 토큰으로 교체
-      const response = await axios.get('http://localhost:8080/boards/search', {
+      const response = await axios.get('http://54.198.230.191:8080/boards/search', {
         headers: {
           Authorization: token, // 토큰을 헤더에 추가
         },

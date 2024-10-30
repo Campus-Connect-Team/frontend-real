@@ -236,7 +236,7 @@ const ProfileImgChange = () => {
           return;
         }
 
-        await axios.patch(`http://localhost:8080/users/my-page/${studentNumber}/profile-image`, formData, {
+        await axios.patch(`http://54.198.230.191:8080/users/my-page/${studentNumber}/profile-image`, formData, {
           headers: {
             Authorization: token,
             'Content-Type': 'multipart/form-data',
@@ -273,7 +273,7 @@ const ProfileImgChange = () => {
       }
 
       // 프로필 정보 요청
-      const response = await axios.get(`http://localhost:8080/users/my-page`, {
+      const response = await axios.get(`http://54.198.230.191:8080/users/my-page`, {
         headers: {
           Authorization: token,
         },

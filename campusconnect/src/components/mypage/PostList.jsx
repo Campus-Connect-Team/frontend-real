@@ -111,7 +111,7 @@ function PostList() {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/users/my-page`, {
+        const response = await axios.get(`http://54.198.230.191:8080/users/my-page`, {
           headers: {
             Authorization: token,
           },
@@ -146,7 +146,7 @@ function PostList() {
           return;
         }
 
-        await axios.delete(`http://localhost:8080/boards/${boardId}`, {
+        await axios.delete(`http://54.198.230.191:8080/boards/${boardId}`, {
           headers: {
             Authorization: token,
           },

@@ -75,7 +75,7 @@ const SellerWrapper = () => {
 
         // boardId가 존재하는 경우에만 API 호출
         if (boardId) {
-          const response = await axios.get(`http://localhost:8080/boards/${boardId}`, config);
+          const response = await axios.get(`http://54.198.230.191:8080/boards/${boardId}`, config);
           const { department, name, createdAt, image } = response.data;
           setSellerInfo({
             department,

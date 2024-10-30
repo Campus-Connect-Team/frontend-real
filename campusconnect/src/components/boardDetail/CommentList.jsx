@@ -26,7 +26,7 @@ const CommentList = ({ updateComment, deleteComment }) => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:8080/boards/${boardId}/comments`, {
+      const response = await axios.get(`http://54.198.230.191:8080/boards/${boardId}/comments`, {
         headers: {
           Authorization: token
         }
@@ -50,7 +50,7 @@ const CommentList = ({ updateComment, deleteComment }) => {
 
     try {
       await axios.post(
-        `http://localhost:8080/boards/${boardId}/comments`,
+        `http://54.198.230.191:8080/boards/${boardId}/comments`,
         { commentContent: text },
         {
           headers: {
@@ -76,7 +76,7 @@ const CommentList = ({ updateComment, deleteComment }) => {
 
     try {
       await axios.patch(
-        `http://localhost:8080/boards/${boardId}/comments/${id}`,
+        `http://54.198.230.191:8080/boards/${boardId}/comments/${id}`,
         { commentUpdateContent: text },
         {
           headers: {
@@ -99,7 +99,7 @@ const CommentList = ({ updateComment, deleteComment }) => {
 
     try {
       if (window.confirm('선택한 댓글을 삭제하시겠습니까?')) {
-        await axios.delete(`http://localhost:8080/boards/${boardId}/comments/${id}`, {
+        await axios.delete(`http://54.198.230.191:8080/boards/${boardId}/comments/${id}`, {
           headers: {
             Authorization: token
           }

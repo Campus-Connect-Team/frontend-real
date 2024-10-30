@@ -25,7 +25,7 @@ function LoginPage() {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/users/log-in', loginData, {
+      const response = await axios.post('http://54.198.230.191:8080/users/log-in', loginData, {
         headers: {
           'Content-Type': 'application/json',
         }
