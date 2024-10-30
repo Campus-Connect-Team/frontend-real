@@ -310,7 +310,7 @@ function Signup() {
     e.preventDefault();
     console.log(signup.studentNumber);
     axios
-      .get('http://localhost:8080/users/sign-up/studentNumber-duplicate-validation', {
+      .get('http://54.198.230.191:8080/users/sign-up/studentNumber-duplicate-validation', {
         params: {
           studentNumber: signup.studentNumber,
         },
@@ -330,7 +330,7 @@ function Signup() {
   const emailCheckHandler = (e) => {
     e.preventDefault();
     axios
-      .get('http://localhost:8080/users/sign-up/email-duplicate-validation', {
+      .get('http://54.198.230.191:8080/users/sign-up/email-duplicate-validation', {
         params: {
           email: signup.email,
         },
@@ -351,7 +351,7 @@ function Signup() {
     e.preventDefault();
     axios
       .post(
-        'http://localhost:8080/users/sign-up/email-authentication',
+        'http://54.198.230.191:8080/users/sign-up/email-authentication',
         {
           email: signup.email,
         },
@@ -368,7 +368,7 @@ function Signup() {
     e.preventDefault();
 
     axios
-      .get('http://localhost:8080/users/sign-up/email-authentication', {
+      .get('http://54.198.230.191:8080/users/sign-up/email-authentication', {
         params: {
           email: signup.email,
           authenticationNumber: signup.authenticationNumber,
@@ -407,7 +407,7 @@ function Signup() {
     );
 
     axios
-      .post('http://localhost:8080/users/sign-up', formData, {
+      .post('http://54.198.230.191:8080/users/sign-up', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
       .then((res) => {

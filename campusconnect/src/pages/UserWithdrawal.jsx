@@ -11,7 +11,7 @@ function DeletePage() {
   // 회원 탈퇴 요청 함수
   const handleWithdrawal = async (studentNumber, token, passwordData) => {
     try {
-      const response = await axios.delete(`http://localhost:8080/users/my-page/withdrawal/${studentNumber}`, {
+      const response = await axios.delete(`http://54.198.230.191:8080/users/my-page/withdrawal/${studentNumber}`, {
         headers: {
           Authorization: token
         },

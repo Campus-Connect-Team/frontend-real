@@ -21,7 +21,7 @@ const FindPasswordForm = () => {
 
   const handleTempPasswordSubmit = () => {
     // setShowFindPasswordInfo(true);
-    const apiEndpoint = 'http://localhost:8080/users/log-in/find-password';
+    const apiEndpoint = 'http://54.198.230.191:8080/users/log-in/find-password';
     axios.post(apiEndpoint, {
       studentNumber,
       email: schoolEmail,

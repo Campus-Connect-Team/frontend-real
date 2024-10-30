@@ -30,7 +30,7 @@ const ProfileAfter = () => {
         }
 
         // 프로필 정보 요청
-        const response = await axios.get('http://localhost:8080/users/my-page', {
+        const response = await axios.get('http://54.198.230.191:8080/users/my-page', {
           headers: {
             Authorization: token,
           },

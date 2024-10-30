@@ -68,7 +68,7 @@ class SoftwareView extends Component {
 
             console.log('폼 데이터:', ...formData.entries());
 
-            const response = await axios.post("http://localhost:8080/boards", formData, {
+            const response = await axios.post("http://54.198.230.191:8080/boards", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `${token}`

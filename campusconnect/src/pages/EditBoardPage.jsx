@@ -32,7 +32,7 @@ const EditSoftwareView = () => {
         }
 
         try {
-            const response = await axios.get(`http://localhost:8080/boards/${boardId}`, {
+            const response = await axios.get(`http://54.198.230.191:8080/boards/${boardId}`, {
                 headers: {
                     Authorization: token
                 }
@@ -112,7 +112,7 @@ const EditSoftwareView = () => {
 
             console.log('폼 데이터:', ...formData.entries());
 
-            const response = await axios.patch(`http://localhost:8080/boards/${boardId}`, formData, {
+            const response = await axios.patch(`http://54.198.230.191:8080/boards/${boardId}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': token

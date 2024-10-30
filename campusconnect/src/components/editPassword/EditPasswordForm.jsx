@@ -53,7 +53,7 @@ const EditPasswordForm = () => {
 
     try {
       const response = await axios.patch(
-        `http://localhost:8080/users/my-page/password/${studentNumber}`,
+        `http://54.198.230.191host:8080/users/my-page/password/${studentNumber}`,
         {
           currentPassword,
           editPassword: newPassword,

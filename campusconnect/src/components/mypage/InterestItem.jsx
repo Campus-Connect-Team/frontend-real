@@ -109,7 +109,7 @@ function InterestItem({ openInterestListOff }) {
       }
 
       try {
-        const response = await axios.get(`http://localhost:8080/users/my-page`, {
+        const response = await axios.get(`http://54.198.230.191:8080/users/my-page`, {
           headers: {
             Authorization: token
           },
@@ -136,7 +136,7 @@ function InterestItem({ openInterestListOff }) {
     }
 
     try {
-      await axios.patch(`http://localhost:8080/boards/${boardId}/favorite/cancel`, null, {
+      await axios.patch(`http://54.198.230.191:8080/boards/${boardId}/favorite/cancel`, null, {
         headers: {
           Authorization: token
         }
